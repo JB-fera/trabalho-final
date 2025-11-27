@@ -22,12 +22,12 @@ public class UsuarioController {
     @Autowired
     public UsuarioService usuarioService;
 
-    @GetMapping("/find/{id}")
-    public Usuario find(@PathVariable Integer id) {
+    @GetMapping("/buscar/{id}")
+    public Usuario buscar(@PathVariable Integer id) {
         return usuarioService.findById(id);
     }
 
-    @GetMapping("/list")
+    @GetMapping("/listarTodos")
     public List<Usuario> list() {
         return usuarioService.listar();
     }
@@ -39,7 +39,7 @@ public class UsuarioController {
 
     @PostMapping("/cadastro")
     public Usuario cadastar(@RequestBody Usuario usuario) {
-        return usuarioService.cadastrar(usuario);
+        return usuarioService.save(usuario);
     }
 
     @PostMapping

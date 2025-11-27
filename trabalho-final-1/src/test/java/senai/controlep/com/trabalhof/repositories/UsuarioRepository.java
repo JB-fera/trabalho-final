@@ -8,5 +8,5 @@ import senai.controlep.com.trabalhof.models.Usuario;
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     
-    public Usuario findByNome(String nome);
+    
 }
